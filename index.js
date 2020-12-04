@@ -1,18 +1,18 @@
 
 
-window.onload = () => {
+window.onload = function() {
 
-   // let aleatorio = Match.random() *10;
+
    document.querySelector("#boton").addEventListener("click",() => 
    {
        document.querySelector ('#motivo').innerHTML = generaExcusa();
    });
     
-      console.log ("Prueba");
+    
     
 };
 
-let generaExcusa = () => {
+function generaExcusa  ()  {
 
 
 let who = ['The dog','My grandma','His turtle','My bird'];
@@ -23,7 +23,7 @@ let when = ['before the class','right on time','when I finished','during my lunc
 let indexwho     = Math.floor(Math.random() * who.length);
 let indexaction  = Math.floor(Math.random() * action.length);
 let indexwhat  = Math.floor(Math.random() * what.length);
-let indexwhen  = Math.floor(Math.random() * whwhenat.length);
+let indexwhen  = Math.floor(Math.random() * when.length);
 
 return who[indexwho] + ' ' + action[indexaction] +' ' + what[indexwhat] +' ' + when[indexwhen];
 
